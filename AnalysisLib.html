@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module AnalysisLib</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>AnalysisLib</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmbakshi%5Cdocuments%5Cchallenge%5Cdev%5Cchallenge%5Canalysislib.py">c:\users\mbakshi\documents\challenge\dev\challenge\analysislib.py</a></font></td></tr></table>
+    <p><tt>Analysis&nbsp;library&nbsp;for&nbsp;performing&nbsp;multi-threaded&nbsp;post&nbsp;processing&nbsp;on&nbsp;data<br>
+Includes&nbsp;reading&nbsp;raw&nbsp;data,&nbsp;reading&nbsp;spec&nbsp;data</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="SupportFunctions.DUTObject.html">SupportFunctions.DUTObject</a><br>
+<a href="SupportFunctions.DataLib.html">SupportFunctions.DataLib</a><br>
+</td><td width="25%" valign=top><a href="SupportFunctions.ProcessingLib.html">SupportFunctions.ProcessingLib</a><br>
+<a href="SupportFunctions.SpecLib.html">SupportFunctions.SpecLib</a><br>
+</td><td width="25%" valign=top><a href="queue.html">queue</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="AnalysisLib.html#ATSProcessor">ATSProcessor</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ATSProcessor">class <strong>ATSProcessor</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#&nbsp;noinspection&nbsp;PyBroadException<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ATSProcessor-RunAnalysis"><strong>RunAnalysis</strong></a>(self, percentQueue)</dt><dd><tt>Full&nbsp;analysis&nbsp;functionality.&nbsp;Performs&nbsp;analysis&nbsp;on&nbsp;data&nbsp;provided&nbsp;in&nbsp;the&nbsp;dataQueue.&nbsp;Updates&nbsp;the&nbsp;DUT&nbsp;<a href="builtins.html#object">object</a>.<br>
+Used&nbsp;only&nbsp;for&nbsp;multi-threading.&nbsp;Unused&nbsp;for&nbsp;this&nbsp;non-threaded&nbsp;code.<br>
+&nbsp;<br>
+:param&nbsp;percentQueue:&nbsp;helps&nbsp;to&nbsp;track&nbsp;progress<br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+
+<dl><dt><a name="ATSProcessor-__init__"><strong>__init__</strong></a>(self, specInfo, DUTObj, saveFilePath, logger)</dt><dd><tt>Construct&nbsp;a&nbsp;new&nbsp;'<a href="#ATSProcessor">ATSProcessor</a>'&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;parent:&nbsp;as&nbsp;needed<br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+
+<dl><dt><a name="ATSProcessor-buildAnalysisDataVector"><strong>buildAnalysisDataVector</strong></a>(self, sParamList)</dt><dd><tt>Function&nbsp;used&nbsp;to&nbsp;package&nbsp;the&nbsp;data&nbsp;for&nbsp;use&nbsp;by&nbsp;the&nbsp;processing&nbsp;functions.&nbsp;It&nbsp;will&nbsp;also&nbsp;get&nbsp;previous&nbsp;data&nbsp;from&nbsp;files&nbsp;if&nbsp;needed.<br>
+&nbsp;<br>
+:param&nbsp;sParamList:&nbsp;parameter&nbsp;list&nbsp;to&nbsp;follow.<br>
+:return:&nbsp;returns&nbsp;dataVector</tt></dd></dl>
+
+<dl><dt><a name="ATSProcessor-callProcessingFunction"><strong>callProcessingFunction</strong></a>(self, specAnalysisDef)</dt><dd><tt>Intermediate&nbsp;function&nbsp;for&nbsp;calling&nbsp;the&nbsp;processing&nbsp;functions&nbsp;in&nbsp;a&nbsp;way&nbsp;that&nbsp;the&nbsp;processing&nbsp;library&nbsp;can&nbsp;be&nbsp;updated&nbsp;without&nbsp;changing&nbsp;this&nbsp;<a href="builtins.html#object">object</a>.<br>
+Process&nbsp;functions&nbsp;are&nbsp;called&nbsp;by&nbsp;name&nbsp;and&nbsp;supplied&nbsp;the&nbsp;data&nbsp;and&nbsp;the&nbsp;requirements<br>
+&nbsp;<br>
+:param&nbsp;specAnalysisDef:&nbsp;definition&nbsp;of&nbsp;analysis<br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>currentSuggestion</strong> = ''</dl>
+
+<dl><dt><strong>dataQueue</strong> = ''</dl>
+
+<dl><dt><strong>isActive</strong> = True</dl>
+
+<dl><dt><strong>loadedDUTs</strong> = {}</dl>
+
+<dl><dt><strong>logger</strong> = ''</dl>
+
+<dl><dt><strong>measurementsCompleted</strong> = False</dl>
+
+<dl><dt><strong>saveFilePath</strong> = ''</dl>
+
+<dl><dt><strong>specInfo</strong> = ''</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module DUTObject</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>DUTObject</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmbakshi%5Cdocuments%5Cchallenge%5Cdev%5Cchallenge%5Csupportfunctions%5Cdutobject.py">c:\users\mbakshi\documents\challenge\dev\challenge\supportfunctions\dutobject.py</a></font></td></tr></table>
+    <p><tt>DUT&nbsp;<a href="builtins.html#object">object</a>&nbsp;container&nbsp;to&nbsp;encapsulate&nbsp;all&nbsp;information&nbsp;about&nbsp;one&nbsp;of&nbsp;the&nbsp;devices.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="DUTObject.html#DUTObject">DUTObject</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DUTObject">class <strong>DUTObject</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Container&nbsp;for&nbsp;all&nbsp;of&nbsp;the&nbsp;Suggestion&nbsp;properties&nbsp;pertaining&nbsp;to&nbsp;the&nbsp;database.&nbsp;Includes&nbsp;the&nbsp;measurement&nbsp;data&nbsp;and&nbsp;results.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="DUTObject-__init__"><strong>__init__</strong></a>(self, DUTNumber, DUTType, resultFolderPath, logger)</dt><dd><tt>Construct&nbsp;a&nbsp;new&nbsp;'<a href="#DUTObject">DUTObject</a>'&nbsp;<a href="builtins.html#object">object</a>.<br>
+&nbsp;<br>
+:param&nbsp;DUTNumber:&nbsp;local&nbsp;DUT&nbsp;number&nbsp;to&nbsp;keep&nbsp;track&nbsp;of&nbsp;tested&nbsp;DUT&nbsp;data<br>
+:param&nbsp;DUTType:&nbsp;For&nbsp;a&nbsp;given&nbsp;input&nbsp;data&nbsp;file(s),&nbsp;set&nbsp;of&nbsp;queries&nbsp;to&nbsp;run<br>
+:param&nbsp;resultFolderPath:&nbsp;folder&nbsp;path<br>
+:param&nbsp;logger:&nbsp;Object&nbsp;of&nbsp;the&nbsp;logger.<br>
+:return:&nbsp;returns&nbsp;nothing</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DataContainer</strong> = []</dl>
+
+<dl><dt><strong>SuggestionNumber</strong> = 0</dl>
+
+<dl><dt><strong>SuggestionResultPath</strong> = ''</dl>
+
+<dl><dt><strong>SuggestionType</strong> = ''</dl>
+
+<dl><dt><strong>lockObject</strong> = ''</dl>
+
+<dl><dt><strong>logger</strong> = ''</dl>
+
+<dl><dt><strong>resultSummary</strong> = {}</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-Lock"><strong>Lock</strong></a> = allocate_lock(...)</dt><dd><tt>allocate_lock()&nbsp;-&gt;&nbsp;lock&nbsp;<a href="builtins.html#object">object</a><br>
+(allocate()&nbsp;is&nbsp;an&nbsp;obsolete&nbsp;synonym)<br>
+&nbsp;<br>
+Create&nbsp;a&nbsp;new&nbsp;lock&nbsp;<a href="builtins.html#object">object</a>.&nbsp;See&nbsp;help(type(threading.<a href="#-Lock">Lock</a>()))&nbsp;for<br>
+information&nbsp;about&nbsp;locks.</tt></dd></dl>
+</td></tr></table>
+</body></html>

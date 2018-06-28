@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module ProcessingLib</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>ProcessingLib</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmbakshi%5Cdocuments%5Cchallenge%5Cdev%5Cchallenge%5Csupportfunctions%5Cprocessinglib.py">c:\users\mbakshi\documents\challenge\dev\challenge\supportfunctions\processinglib.py</a></font></td></tr></table>
+    <p><tt>Library&nbsp;containing&nbsp;all&nbsp;functions&nbsp;used&nbsp;for&nbsp;processing&nbsp;data&nbsp;for&nbsp;the&nbsp;analysis&nbsp;framework<br>
+functions&nbsp;simply&nbsp;need&nbsp;to&nbsp;be&nbsp;added&nbsp;here&nbsp;and&nbsp;then&nbsp;references&nbsp;in&nbsp;the&nbsp;SPEC&nbsp;file.<br>
+The&nbsp;analysis&nbsp;framework&nbsp;will&nbsp;detect&nbsp;and&nbsp;use&nbsp;any&nbsp;and&nbsp;all&nbsp;functions&nbsp;presented&nbsp;here<br>
+&nbsp;<br>
+this&nbsp;is&nbsp;the&nbsp;template&nbsp;for&nbsp;all&nbsp;methods&nbsp;in&nbsp;the&nbsp;class,&nbsp;methods&nbsp;without&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;def&nbsp;processName(data,&nbsp;specInfo):<br>
+the&nbsp;data&nbsp;you&nbsp;receive&nbsp;depends&nbsp;on&nbsp;how&nbsp;the&nbsp;measurement&nbsp;is&nbsp;defined&nbsp;in&nbsp;the&nbsp;spec<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;spec&nbsp;says&nbsp;that&nbsp;you&nbsp;only&nbsp;need&nbsp;one&nbsp;parameter,&nbsp;expect&nbsp;only&nbsp;one,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;spec&nbsp;says&nbsp;that&nbsp;you&nbsp;need&nbsp;multiple&nbsp;s-parameters,&nbsp;expect&nbsp;an&nbsp;array&nbsp;of&nbsp;data&nbsp;objects&nbsp;in&nbsp;the&nbsp;same&nbsp;order&nbsp;that&nbsp;it&nbsp;is&nbsp;defined&nbsp;in&nbsp;the&nbsp;spec.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-GETSuggestions"><strong>GETSuggestions</strong></a>(data, specInfo, saveFilePath, logger)</dt><dd><tt>Helps&nbsp;to&nbsp;get&nbsp;suggestions&nbsp;for&nbsp;a&nbsp;given&nbsp;query&nbsp;string,&nbsp;latitude&nbsp;and&nbsp;longitude<br>
+:param&nbsp;data:&nbsp;the&nbsp;data&nbsp;you&nbsp;receive&nbsp;depends&nbsp;on&nbsp;how&nbsp;the&nbsp;measurement&nbsp;is&nbsp;defined&nbsp;in&nbsp;the&nbsp;spec<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;specInfo&nbsp;says&nbsp;that&nbsp;you&nbsp;only&nbsp;need&nbsp;one&nbsp;parameter,&nbsp;expect&nbsp;only&nbsp;one,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;the&nbsp;specInfo&nbsp;says&nbsp;that&nbsp;you&nbsp;need&nbsp;multiple&nbsp;s-parameters,&nbsp;expect&nbsp;an&nbsp;array&nbsp;of&nbsp;data&nbsp;objects&nbsp;in&nbsp;the&nbsp;same&nbsp;order&nbsp;that&nbsp;it&nbsp;is&nbsp;defined&nbsp;in&nbsp;the&nbsp;spec.<br>
+:param&nbsp;specInfo:&nbsp;path<br>
+:param&nbsp;saveFilePath:&nbsp;folder&nbsp;path&nbsp;to&nbsp;save&nbsp;json&nbsp;output<br>
+:return:&nbsp;writes&nbsp;to&nbsp;specified&nbsp;output&nbsp;file</tt></dd></dl>
+ <dl><dt><a name="-helperDistance"><strong>helperDistance</strong></a>(originLat, originLon, destinationLat, destinationLon)</dt><dd><tt>Calculate&nbsp;the&nbsp;Haversine&nbsp;distance.<br>
+Reference:&nbsp;https://stackoverflow.com/questions/19412462/getting-distance-between-two-points-based-on-latitude-longitude<br>
+Parameters<br>
+----------<br>
+origin&nbsp;:&nbsp;tuple&nbsp;of&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(lat,&nbsp;long)<br>
+destination&nbsp;:&nbsp;tuple&nbsp;of&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(lat,&nbsp;long)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+distance_in_km&nbsp;:&nbsp;float<br>
+&nbsp;<br>
+Examples<br>
+--------<br>
+&gt;&gt;&gt;&nbsp;origin&nbsp;=&nbsp;(48.1372,&nbsp;11.5756)&nbsp;&nbsp;#&nbsp;Munich<br>
+&gt;&gt;&gt;&nbsp;destination&nbsp;=&nbsp;(52.5186,&nbsp;13.4083)&nbsp;&nbsp;#&nbsp;Berlin<br>
+&gt;&gt;&gt;&nbsp;round(distance(origin,&nbsp;destination),&nbsp;1)<br>
+504.2</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>my_path</strong> = r'C:\Users\mbakshi\Documents\Challenge\Dev\Challenge\SupportFunctions\ProcessingLib.py'</td></tr></table>
+</body></html>

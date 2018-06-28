@@ -1,0 +1,42 @@
+2018-06-28 10:18:34,733 INFO Cities_Canada-USA automated Suggestions in progress....
+2018-06-28 10:18:34,733 DEBUG Load tsv data of file: AutoSuggestionData\\cities_canada-usa.tsv.
+2018-06-28 10:18:34,766 DEBUG Load tsv data of file: AutoSuggestionData\\cities_canada-usa.tsv.
+2018-06-28 10:18:34,821 DEBUG query string = Londo, latitude = 43.70011, longitude = -79.4163
+2018-06-28 10:18:34,821 DEBUG =======================================================================================================
+2018-06-28 10:18:34,821 DEBUG name:London
+2018-06-28 10:18:34,821 DEBUG score:0.6
+2018-06-28 10:18:34,821 DEBUG longitude:-81.23304
+2018-06-28 10:18:34,821 DEBUG latitude:42.98339
+2018-06-28 10:18:34,822 DEBUG name:London
+2018-06-28 10:18:34,822 DEBUG score:0.4
+2018-06-28 10:18:34,822 DEBUG longitude:-84.08326
+2018-06-28 10:18:34,822 DEBUG latitude:37.12898
+2018-06-28 10:18:34,822 DEBUG name:Londontowne
+2018-06-28 10:18:34,822 DEBUG score:0.6
+2018-06-28 10:18:34,822 DEBUG longitude:-76.54941
+2018-06-28 10:18:34,822 DEBUG latitude:38.93345
+2018-06-28 10:18:34,822 DEBUG name:London
+2018-06-28 10:18:34,822 DEBUG score:0.6
+2018-06-28 10:18:34,822 DEBUG longitude:-83.44825
+2018-06-28 10:18:34,822 DEBUG latitude:39.88645
+2018-06-28 10:18:34,823 DEBUG name:New London
+2018-06-28 10:18:34,823 DEBUG score:0.6
+2018-06-28 10:18:34,823 DEBUG longitude:-72.09952
+2018-06-28 10:18:34,823 DEBUG latitude:41.35565
+2018-06-28 10:18:34,823 DEBUG name:Londonderry
+2018-06-28 10:18:34,823 DEBUG score:0.6
+2018-06-28 10:18:34,823 DEBUG longitude:-71.37395
+2018-06-28 10:18:34,823 DEBUG latitude:42.86509
+2018-06-28 10:18:34,823 DEBUG name:New London
+2018-06-28 10:18:34,823 DEBUG score:0.6
+2018-06-28 10:18:34,823 DEBUG longitude:-88.73983
+2018-06-28 10:18:34,823 DEBUG latitude:44.39276
+2018-06-28 10:18:34,823 DEBUG =======================================================================================================
+2018-06-28 10:18:34,827 INFO Done Query: CmdLine
+2018-06-28 10:18:34,827 DEBUG query string = London, latitude = 0.0, longitude = 0.0
+2018-06-28 10:18:34,827 DEBUG =======================================================================================================
+2018-06-28 10:18:34,827 DEBUG =======================================================================================================
+2018-06-28 10:18:34,832 INFO Done Query: RL_RxL
+2018-06-28 10:18:44,684 INFO Cities_Canada-USA automated Suggestions in progress....
+2018-06-28 10:18:47,739 DEBUG Load tsv data of file: AutoSuggestionData\\cities_canada-usa.tsv.
+2018-06-28 10:18:52,223 DEBUG Load tsv data of file: AutoSuggestionData\\cities_canada-usa.tsv.

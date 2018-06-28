@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module AutoSuggestionTester</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>AutoSuggestionTester</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmbakshi%5Cdocuments%5Cchallenge%5Cdev%5Cchallenge%5Cautosuggestiontester.py">c:\users\mbakshi\documents\challenge\dev\challenge\autosuggestiontester.py</a></font></td></tr></table>
+    <p><tt>Master&nbsp;sequencer,&nbsp;responsible&nbsp;for&nbsp;the&nbsp;skeleton&nbsp;of&nbsp;the&nbsp;framework.<br>
+load&nbsp;needed&nbsp;tsv&nbsp;(Tab&nbsp;seperated&nbsp;Values)&nbsp;files<br>
+Use&nbsp;Specifications&nbsp;file&nbsp;for&nbsp;all&nbsp;input&nbsp;information.<br>
+Queries&nbsp;can&nbsp;also&nbsp;be&nbsp;passed&nbsp;from&nbsp;the&nbsp;command&nbsp;propt.<br>
+e.g.,&nbsp;GET&nbsp;/suggestions?q=Londo&amp;latitude=43.70011&amp;longitude=-79.4163<br>
+Output:&nbsp;AutoSuggestionData/CmdLine.OUT<br>
+&nbsp;<br>
+Set&nbsp;of&nbsp;queries&nbsp;can&nbsp;be&nbsp;passed&nbsp;from&nbsp;XML&nbsp;file&nbsp;using&nbsp;AnalyzeData&nbsp;section.<br>
+Output:&nbsp;will&nbsp;be&nbsp;stored&nbsp;with&nbsp;AutoSuggestionData//&lt;XMLQueryName&gt;.OUT<br>
+&nbsp;<br>
+We&nbsp;can&nbsp;run&nbsp;in&nbsp;parallel&nbsp;loading&nbsp;set&nbsp;of&nbsp;tsv&nbsp;files&nbsp;and&nbsp;running&nbsp;queries&nbsp;once&nbsp;data&nbsp;is&nbsp;loaded.<br>
+e.g.,&nbsp;load&nbsp;cities_Canada-USA.tsv&nbsp;and&nbsp;run&nbsp;set&nbsp;of&nbsp;queries&nbsp;as&nbsp;soon&nbsp;as&nbsp;its&nbsp;data&nbsp;is&nbsp;loaded.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;similarly&nbsp;load&nbsp;cities_asia&nbsp;and&nbsp;run&nbsp;set&nbsp;of&nbsp;queries&nbsp;as&nbsp;soon&nbsp;as&nbsp;its&nbsp;data&nbsp;is&nbsp;loaded.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As&nbsp;we&nbsp;use&nbsp;load&nbsp;one&nbsp;tsv&nbsp;file&nbsp;and&nbsp;run&nbsp;multiple&nbsp;queties&nbsp;on&nbsp;it.&nbsp;At&nbsp;present&nbsp;it&nbsp;is&nbsp;done&nbsp;in&nbsp;a&nbsp;single&nbsp;thread.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But&nbsp;if&nbsp;we&nbsp;have&nbsp;multiple&nbsp;tsv&nbsp;files&nbsp;to&nbsp;load&nbsp;and&nbsp;run&nbsp;queries&nbsp;on&nbsp;each&nbsp;of&nbsp;them,&nbsp;then&nbsp;using&nbsp;as&nbsp;multi-thrading&nbsp;fastens&nbsp;things&nbsp;and&nbsp;works.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="AnalysisLib.html">AnalysisLib</a><br>
+<a href="SupportFunctions.DUTObject.html">SupportFunctions.DUTObject</a><br>
+<a href="SupportFunctions.DataLib.html">SupportFunctions.DataLib</a><br>
+</td><td width="25%" valign=top><a href="SupportFunctions.ProcessingLib.html">SupportFunctions.ProcessingLib</a><br>
+<a href="SupportFunctions.SpecLib.html">SupportFunctions.SpecLib</a><br>
+<a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="pydoc.html">pydoc</a><br>
+<a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DataPath</strong> = 'AutoSuggestionData'<br>
+<strong>PathNum</strong> = 11<br>
+<strong>TsvFileAc</strong> = r'AutoSuggestionData\\cities_canada-usa_copy.tsv'<br>
+<strong>currentSuggestion</strong> = &lt;SupportFunctions.DUTObject.DUTObject object&gt;<br>
+<strong>formatter</strong> = &lt;logging.Formatter object&gt;<br>
+<strong>hdlr</strong> = &lt;logging.FileHandler object&gt;<br>
+<strong>i</strong> = 3<br>
+<strong>logger</strong> = &lt;logging.Logger object&gt;<br>
+<strong>pathIds</strong> = dict_keys([10, 11])<br>
+<strong>processor</strong> = &lt;AnalysisLib.ATSProcessor object&gt;<br>
+<strong>specInfo</strong> = &lt;SupportFunctions.SpecLib.SpecList object&gt;<br>
+<strong>timeStr</strong> = '201806281114'</td></tr></table>
+</body></html>

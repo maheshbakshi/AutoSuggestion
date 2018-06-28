@@ -1,0 +1,66 @@
+2018-06-28 00:20:45,611 INFO Cities_Canada-USA automated Suggestions in progress....
+2018-06-28 00:20:45,611 DEBUG Load tsv data of file: AutoSuggestionData\\cities_canada-usa.tsv.
+2018-06-28 00:20:45,669 DEBUG query string = Londo, latitude = 43.70011, longitude = -79.4163
+2018-06-28 00:20:45,669 DEBUG =======================================================================================================
+2018-06-28 00:20:45,669 DEBUG latitude:42.98339
+2018-06-28 00:20:45,669 DEBUG longitude:-81.23304
+2018-06-28 00:20:45,669 DEBUG score:0.6
+2018-06-28 00:20:45,670 DEBUG name:London
+2018-06-28 00:20:45,670 DEBUG latitude:37.12898
+2018-06-28 00:20:45,670 DEBUG longitude:-84.08326
+2018-06-28 00:20:45,670 DEBUG score:0.4
+2018-06-28 00:20:45,670 DEBUG name:London
+2018-06-28 00:20:45,670 DEBUG latitude:38.93345
+2018-06-28 00:20:45,670 DEBUG longitude:-76.54941
+2018-06-28 00:20:45,670 DEBUG score:0.6
+2018-06-28 00:20:45,670 DEBUG name:Londontowne
+2018-06-28 00:20:45,670 DEBUG latitude:39.88645
+2018-06-28 00:20:45,670 DEBUG longitude:-83.44825
+2018-06-28 00:20:45,670 DEBUG score:0.6
+2018-06-28 00:20:45,670 DEBUG name:London
+2018-06-28 00:20:45,670 DEBUG latitude:41.35565
+2018-06-28 00:20:45,671 DEBUG longitude:-72.09952
+2018-06-28 00:20:45,671 DEBUG score:0.6
+2018-06-28 00:20:45,671 DEBUG name:New London
+2018-06-28 00:20:45,671 DEBUG latitude:42.86509
+2018-06-28 00:20:45,671 DEBUG longitude:-71.37395
+2018-06-28 00:20:45,671 DEBUG score:0.6
+2018-06-28 00:20:45,671 DEBUG name:Londonderry
+2018-06-28 00:20:45,671 DEBUG latitude:44.39276
+2018-06-28 00:20:45,671 DEBUG longitude:-88.73983
+2018-06-28 00:20:45,671 DEBUG score:0.6
+2018-06-28 00:20:45,671 DEBUG name:New London
+2018-06-28 00:20:45,671 DEBUG =======================================================================================================
+2018-06-28 00:20:45,677 INFO Done Query: CmdLine
+2018-06-28 00:20:45,698 DEBUG query string = London, latitude = 0.0, longitude = 0.0
+2018-06-28 00:20:45,698 DEBUG =======================================================================================================
+2018-06-28 00:20:45,698 DEBUG latitude:42.98339
+2018-06-28 00:20:45,698 DEBUG longitude:-81.23304
+2018-06-28 00:20:45,698 DEBUG score:0.1
+2018-06-28 00:20:45,698 DEBUG name:London
+2018-06-28 00:20:45,698 DEBUG latitude:37.12898
+2018-06-28 00:20:45,698 DEBUG longitude:-84.08326
+2018-06-28 00:20:45,699 DEBUG score:0.1
+2018-06-28 00:20:45,699 DEBUG name:London
+2018-06-28 00:20:45,699 DEBUG latitude:38.93345
+2018-06-28 00:20:45,699 DEBUG longitude:-76.54941
+2018-06-28 00:20:45,699 DEBUG score:0.1
+2018-06-28 00:20:45,699 DEBUG name:Londontowne
+2018-06-28 00:20:45,699 DEBUG latitude:39.88645
+2018-06-28 00:20:45,699 DEBUG longitude:-83.44825
+2018-06-28 00:20:45,699 DEBUG score:0.1
+2018-06-28 00:20:45,699 DEBUG name:London
+2018-06-28 00:20:45,699 DEBUG latitude:41.35565
+2018-06-28 00:20:45,699 DEBUG longitude:-72.09952
+2018-06-28 00:20:45,699 DEBUG score:0.1
+2018-06-28 00:20:45,699 DEBUG name:New London
+2018-06-28 00:20:45,699 DEBUG latitude:42.86509
+2018-06-28 00:20:45,699 DEBUG longitude:-71.37395
+2018-06-28 00:20:45,699 DEBUG score:0.1
+2018-06-28 00:20:45,699 DEBUG name:Londonderry
+2018-06-28 00:20:45,699 DEBUG latitude:44.39276
+2018-06-28 00:20:45,700 DEBUG longitude:-88.73983
+2018-06-28 00:20:45,700 DEBUG score:0.1
+2018-06-28 00:20:45,700 DEBUG name:New London
+2018-06-28 00:20:45,700 DEBUG =======================================================================================================
+2018-06-28 00:20:45,705 INFO Done Query: RL_RxL
