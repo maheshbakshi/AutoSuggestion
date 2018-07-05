@@ -8,11 +8,11 @@
 	<IsMultiThreaded>True</IsMultiThreaded>
   </Test_Procedure>
   <PathDefinitions>
-<!--       <P10>
-      <S_Params>cities_canada-usa.tsv,S-1-1</S_Params>
-    </P10> -->
+    <P10>
+      <S_Params>UnitTest_cities_canada-usa.tsv,S-1-1</S_Params>
+    </P10> 
 	<P11>
-      <S_Params>cities_canada-usa_copy.tsv,S-2-1</S_Params>
+      <S_Params>UnitTest_cities_canada-usa.tsv,S-2-1</S_Params>
     </P11>
   </PathDefinitions>
     <!-- Test cases executed -->
@@ -25,7 +25,7 @@
 	  <SP1>S-2-1</SP1>
 	  </SP>
       <AnalysisType>GETSuggestions</AnalysisType>
-    </QueryLondonLat0Long0>
+    </QueryLondonLat0Long0> 
 	<QueryLondonNoLatLong>
 	  <QueryString>London</QueryString>
       <SP>
