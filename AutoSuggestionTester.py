@@ -48,23 +48,24 @@ currentSuggestion = DUTObject.DUTObject(1, "cities_canada-usa", DataPath, logger
 
 #Skeloton code for running multi-threaded search
 # Percentage queue
-percentQueue = queue.Queue()
-measurementControl = MeasurementLib.MeasurementController("%s\\Specifications.xml" % DataPath, currentSuggestion.DUTResultPath,
+if(specInfo.specInfoList['IsMultiThreaded'] in ("True","true","TRUE")):
+    percentQueue = queue.Queue()
+    measurementControl = MeasurementLib.MeasurementController("%s\\Specifications.xml" % DataPath, currentSuggestion.DUTResultPath,
                                                                               currentSuggestion, logger)
-measurementControl.RunTests(percentQueue)
+    measurementControl.RunTests(percentQueue)
+else:
+    #Single threaded execution: as we have one tsv file for now.
+    #load all the tsv files provided in the path definitions of the Specifications path
+    pathIds = specInfo.pathDictionary.keys()
+    for PathNum in pathIds:
+        TsvFileAc = r'%s\\' % DataPath + specInfo.pathDictionary[PathNum].DUTPath
+        DataLib.loadLocationDataOnce(TsvFileAc, currentSuggestion, specInfo, logger)
 
-#Single threaded execution: as we have one tsv file for now.
-# load all the tsv files provided in the path definitions of the Specifications path
-pathIds = specInfo.pathDictionary.keys()
-for PathNum in pathIds:
-    TsvFileAc = r'%s\\' % DataPath + specInfo.pathDictionary[PathNum].DUTPath
-    DataLib.loadLocationDataOnce(TsvFileAc, currentSuggestion, specInfo, logger, PathNum)
+    # Create a processing object and run set of queries using already loaded information
+    processor = AnalysisLib.ATSProcessor(specInfo, currentSuggestion, currentSuggestion.DUTResultPath, logger)
 
-# Create a processing object and run set of queries using already loaded information
-processor = AnalysisLib.ATSProcessor(specInfo, currentSuggestion, currentSuggestion.DUTResultPath, logger)
-
-# Run set of queries
-for i in range(len(specInfo.analysisList)):
-    processor.callProcessingFunction(specInfo.getAnalysisByIndex(i))
-    logger.info('Done Query: ' + specInfo.getAnalysisByIndex(i).specAnalysisName)
-    print('Done Query: ' + specInfo.getAnalysisByIndex(i).specAnalysisName)
+    # Run set of queries
+    for i in range(len(specInfo.analysisList)):
+        processor.callProcessingFunction(specInfo.getAnalysisByIndex(i))
+        logger.info('Done Query: ' + specInfo.getAnalysisByIndex(i).specAnalysisName)
+        print('Done Query: ' + specInfo.getAnalysisByIndex(i).specAnalysisName)

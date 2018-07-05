@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AutoSuggestion>
+  <Test_Procedure>
+    <!-- Read only output data path for all input and output files -->
+	<ReadOnlyDataPath>AutoSuggestionData</ReadOnlyDataPath>
+    <!-- Chunk size used to read while loading huge files. -->
+    <ReadFileChunkSize>2048</ReadFileChunkSize>
+	<IsMultiThreaded>True</IsMultiThreaded>
+  </Test_Procedure>
+  <PathDefinitions>
+    <P10>
+      <S_Params>UnitTest_cities_canada-usa.tsv,S-1-1</S_Params>
+    </P10> 
+	<P11>
+      <S_Params>UnitTest_cities_canada-usa.tsv,S-2-1</S_Params>
+    </P11>
+  </PathDefinitions>
+    <!-- Test cases executed -->
+    <AnalyseData>
+	<QueryLondonLat0Long0>
+	  <QueryString>London</QueryString>
+	  <Latitude>0</Latitude>
+	  <Longitude>0</Longitude>
+      <SP>
+	  <SP1>S-2-1</SP1>
+	  </SP>
+      <AnalysisType>GETSuggestions</AnalysisType>
+    </QueryLondonLat0Long0> 
+	<QueryLondonNoLatLong>
+	  <QueryString>London</QueryString>
+      <SP>
+	  <SP1>S-2-1</SP1>
+	  </SP>
+      <AnalysisType>GETSuggestions</AnalysisType>
+    </QueryLondonNoLatLong>
+	<QueryLondonExactCoordinates>
+	  <QueryString>London</QueryString>
+	  <Latitude>42.98339</Latitude>
+	  <Longitude>-81.23304</Longitude>
+      <SP>
+	  <SP1>S-2-1</SP1>
+	  </SP>
+      <AnalysisType>GETSuggestions</AnalysisType>
+    </QueryLondonExactCoordinates>
+	<QueryNotExistingName>
+	  <QueryString>NotExistingName</QueryString>
+	  <Latitude>42.98339</Latitude>
+	  <Longitude>-81.23304</Longitude>
+      <SP>
+	  <SP1>S-2-1</SP1>
+	  </SP>
+      <AnalysisType>GETSuggestions</AnalysisType>
+    </QueryNotExistingName>
+	</AnalyseData>
+</AutoSuggestion>
